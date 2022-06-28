@@ -1,0 +1,24 @@
+﻿@page "/tester"
+@using ProjectBlazor.Data
+@model ProjectBlazor.Pages.TesterModel
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <base href="~/" />
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" />
+    <link href="css/site.css" rel="stylesheet" />
+    <link href="ProjectBlazor.styles.css" rel="stylesheet" />
+    <component type="typeof(HeadOutlet)" render-mode="ServerPrerendered" />
+</head>
+@{
+    <PageTitle class="projeto">Primeiro Projeto</PageTitle>
+}
+
+<h1>Tester</h1>
+
+<ul>
+    @foreach (var tester in Tester)
+    { 
+        <li>@tester.Title</li>
+    }
+</ul>
